@@ -1,0 +1,32 @@
+import { NextRequest, NextResponse } from "next/server";
+import z from "zod";
+import { PrismaClient } from "@/generated/prisma";
+
+const prisma = new PrismaClient();
+
+const createIssueSchema = z.object({
+    title:  z.string().min(1).max(255),
+    //  this means that the totle should be of string with min(1) and max 255
+  description: z.string().min(1)
+
+})
+
+
+
+export async function POST(request:NextRequest){
+    // NextRequest.json() sends a JSON request to the server.
+    const body = await request.json();
+   const validation = createIssueSchema.safeParse(body);
+   if (!validation.success){
+    // NextResponse.json() sends a JSON response back to the client.
+    return NextResponse.json(validation.error, {status:400});
+   }
+    const newIssue = await prisma.issue.create({
+    data: {
+      title: body.title,
+      description: body.description
+    }
+  });
+
+  return NextResponse.json(newIssue , {status:201}); // Return the created issue
+}
