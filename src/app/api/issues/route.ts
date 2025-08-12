@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import z from "zod";
 import { PrismaClient } from "@/generated/prisma";
 
+// https://localhost/api/issue 
+//  we have put the routes.ts in issue folder 
+
 const prisma = new PrismaClient();
 
 const createIssueSchema = z.object({

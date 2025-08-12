@@ -50,3 +50,7 @@ When you deploy your app or work in a team, everyone runs the same migration, en
 
 
 #  go search : next js prisma client: (best practice for prisma and co[y the template ]) 
+
+
+# install Radix UI :
+Radix UI is this super clean, unstyled React component library for building accessible, headless UI components

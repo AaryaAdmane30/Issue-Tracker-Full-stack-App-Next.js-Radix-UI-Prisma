@@ -3,9 +3,10 @@
 
 import React from "react";
 import Link from "next/link";
-import { IoBugSharp } from "react-icons/io5";
+import { IoIosBug } from "react-icons/io";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
+
 //  classnamei is used for more cleaner verison if true or not 
 
 
@@ -30,7 +31,7 @@ const currentPath = usePathname();
   return (
     <nav className="flex space-x-6 border-b mb-5 px-5 h-14 items-center">
       <Link href="/">
-        <IoBugSharp />
+      <IoIosBug />
       </Link>
       <ul className="flex space-x-6">
         {/*  for that we will map it with a key and then take the properties dyanamically   */}
