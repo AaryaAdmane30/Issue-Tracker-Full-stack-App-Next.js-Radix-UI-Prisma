@@ -54,3 +54,17 @@ When you deploy your app or work in a team, everyone runs the same migration, en
 
 # install Radix UI :
 Radix UI is this super clean, unstyled React component library for building accessible, headless UI components
+
+# check how to set Inter font in radix ui section  in Topography
+
+# download - npm install --save react-simplemde-editor easymd
+
+# React SimpleMDE (or EasyMDE) is a lightweight Markdown editor component for React applications. It wraps the EasyMDE library, which is a modern fork of SimpleMDE, providing a clean and user-friendly Markdown editing experience.
+
+
+# download react hooks - npm i react-hooks
+
+# React Hook Form - go to the website
+
+
+# send the data our title description data on API with axios 
